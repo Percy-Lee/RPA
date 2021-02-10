@@ -16,17 +16,17 @@ extensions:
   graph:
     steps:
       身分證確認:
-        x: 216
-        'y': 223.39999389648438
+        x: 251
+        'y': 167.39999389648438
         navigate:
-          07abdf10-8ecb-c57c-3706-c00cdf873ff8:
-            targetId: 7421706d-0f58-0189-9b7d-2ced6eea8ac0
+          8bfe7a7c-aa9a-86c1-5422-e73b701c436d:
+            targetId: c7045cc5-0d73-3339-66c3-8a4755ab808c
             port: SUCCESS
-          addb3b73-c4f3-a9b8-cfc1-e51f9e208116:
-            targetId: 7421706d-0f58-0189-9b7d-2ced6eea8ac0
+          b7cd6b1f-54b7-1a87-19ee-4844cf7361b9:
+            targetId: c7045cc5-0d73-3339-66c3-8a4755ab808c
             port: WARNING
     results:
       SUCCESS:
-        7421706d-0f58-0189-9b7d-2ced6eea8ac0:
-          x: 430
-          'y': 155
+        c7045cc5-0d73-3339-66c3-8a4755ab808c:
+          x: 443
+          'y': 78

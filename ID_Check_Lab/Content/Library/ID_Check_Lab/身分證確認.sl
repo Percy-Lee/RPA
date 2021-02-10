@@ -3,23 +3,17 @@ operation:
   name: 身分證確認
   inputs:
   - ROCID:
-      required: true
-      default: A123874054
+      required: false
   - YEAR:
-      required: true
-      default: '103'
+      required: false
   - MONTH:
-      required: true
-      default: '11'
+      required: false
   - DAY:
-      required: true
-      default: '4'
+      required: false
   - PLACE:
-      required: true
-      default: 新北市
+      required: false
   - CATEGORY:
-      required: true
-      default: 換發
+      required: false
   sequential_action:
     gav: com.microfocus.seq:ID_Check_Lab.身分證確認:1.0.0
     skills:
