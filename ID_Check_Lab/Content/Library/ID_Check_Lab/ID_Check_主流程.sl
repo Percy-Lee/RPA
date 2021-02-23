@@ -23,7 +23,7 @@ flow:
     - 建資料夾_FS_Create_Directory:
         do_external:
           612400c6-c7fd-4922-93a2-d43b5f09cc26:
-            - path: "${'C:\\\\CheckData2\\\\Process\\\\'+Content.split(',',1)[0]+'_'+現在時間}"
+            - path: "${'C:\\\\CheckData2\\\\Process\\\\'+Content.split(',')[0]+'_'+現在時間}"
         publish:
           - path
         navigate:
@@ -34,10 +34,8 @@ flow:
           023c9848-ce6d-4637-b16d-6cde4179d02a:
             - source: '${檔案來源}'
             - delimiter: ','
-            - characterSet: UTF-8
         publish:
           - Content: '${returnResult}'
-          - COUNT
         navigate:
           - failure: on_failure
           - no more items: 建資料夾_FS_Create_Directory
@@ -46,11 +44,11 @@ flow:
         do:
           ID_Check_Lab.身分證確認:
             - ROCID: "${Content.encode('utf-8').decode('UTF-8-sig').split(',')[0]}"
-            - YEAR: "${Content.encode('utf-8').decode('UTF-8-sig').split(',')[1]}"
-            - MONTH: "${Content.encode('utf-8').decode('UTF-8-sig').split(',')[2]}"
-            - DAY: "${Content.encode('utf-8').decode('UTF-8-sig').split(',')[3]}"
-            - PLACE: "${Content.encode('utf-8').decode('UTF-8-sig').split(',')[4]}"
-            - CATEGORY: "${Content.encode('utf-8').decode('UTF-8-sig').split(',')[5]}"
+            - YEAR: "${Content.split(',')[1]}"
+            - MONTH: "${Content.split(',')[2]}"
+            - DAY: "${Content.split(',')[3]}"
+            - PLACE: "${Content.split(',')[4]}"
+            - CATEGORY: "${Content.split(',')[5]}"
             - input_0: null
         navigate:
           - SUCCESS: 搬報表_move
